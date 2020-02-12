@@ -27,8 +27,9 @@
 ##################################################
 
 variable "credentials_file" {
-  default = "./credentials/credentials.json"
-  type    = string
+  default     = "./credentials/credentials.json"
+  description = "path to credential file"
+
 }
 
 
@@ -37,7 +38,7 @@ variable "project" {
 }
 
 variable "location" {
-  default     = "eu-west3"
+  default     = "europe-west1"
   description = "region where gke is deployed"
 }
 
@@ -50,7 +51,6 @@ variable "cluster_name" {
 }
 
 variable "initial_node_count" {
-  default     = 0
   description = "initial node count of gke cluster"
 }
 
@@ -64,5 +64,5 @@ variable "k8s_user" {
 }
 
 variable "k8s_password" {
-  description = "password of master user on kubernetes"
+  description = "password of master user on kubernetes, atleast 16 characters"
 }
